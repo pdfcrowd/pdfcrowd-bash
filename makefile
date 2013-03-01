@@ -13,4 +13,7 @@ test:
 
 	@./pdfcrowd.sh @ $(COMMON)
 
+clean:
+	rm -rf ./out/sh_*.pdf
+
 
