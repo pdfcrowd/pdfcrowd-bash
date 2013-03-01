@@ -1,0 +1,22 @@
+The Bash client for the Pdfcrowd HTML to PDF API <http://pdfcrowd.com/html-to-pdf-api/>.
+
+The script reads options from ~/.pdfcrowd and then from the command line. You
+can store your default options to ~/.pdfcrowd, one option per line:
+
+  $ cat > ~/.pdfcrowd <<!
+  > -username username
+  > -key apikey
+  > -width 210mm
+  > -height 297mm
+  > !
+
+Now, you can run:
+
+  $ pdfcrowd.sh http://www.google.com > google_com.pdf
+  $ pdfcrowd.sh /path/to/local/file > html.pdf
+  $ html_producer | pdfcrowd.sh - > file.pdf
+
+On success, the exit status 0 is returned and the result is written to
+stdout. Otherwise, a non-zero exit status is returned and the error message is
+written to stderr. Run the script with -help to get the list of available
+options.
