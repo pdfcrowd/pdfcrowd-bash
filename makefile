@@ -1,4 +1,4 @@
-all dist clean:
+all dist:
 
 TEST_HTML='<html><body>Uploaded content!</body></html>'
 COMMON := -show-curl-cmd -no-config
