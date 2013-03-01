@@ -48,6 +48,7 @@ conversion options:
  -height H         page height in points, -1 for a single page PDF
  -hmargin M        page horizontal margin in points
  -vmargin M        page vertical margin in points
+ -margins T R B L  sets top, right, bottom and left page margins
  -footer-text      footer text, %u - source url
                                 %p - the current page number
                                 %n - total number of pages
@@ -223,6 +224,10 @@ while true; do
         -vmargin)
             CONV_OPTS=( "${CONV_OPTS[@]}" "-F" "vmargin=$2" )
             shift 2
+            ;;
+        -margins)
+            CONV_OPTS=( "${CONV_OPTS[@]}" "-F" "margin_top=$2" "-F" "margin_right=$3" "-F" "margin_bottom=$4" "-F" "margin_left=$5" )
+            shift 5
             ;;
         -footer-text)
             CONV_OPTS=( "${CONV_OPTS[@]}" "-F" "footer_text=$2" )
