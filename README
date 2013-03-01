@@ -1,4 +1,5 @@
-The Bash client for the Pdfcrowd HTML to PDF API <http://pdfcrowd.com/html-to-pdf-api/>.
+The Bash client for the Pdfcrowd HTML to PDF API:
+<http://pdfcrowd.com/html-to-pdf-api/>.
 
 The script reads options from ~/.pdfcrowd and then from the command line. You
 can store your default options to ~/.pdfcrowd, one option per line:
