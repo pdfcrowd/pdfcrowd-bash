@@ -10,7 +10,7 @@ test:
 	@./pdfcrowd.sh ../test_files/in/simple.html -use-ssl $(COMMON) -out $(OUT)/sh_client_upload.pdf
 	@echo "$TEST_HTML" | ./pdfcrowd.sh - $(COMMON) -out $(OUT)/sh_client_content.pdf
 	@echo '<div style="background-color:red;height:100%">4 margins</div>' | \
-	    ./pdfcrowd.sh - $(COMMON) -margins 0.25in 0.5in 0.75in 1.0in -out $(OUT)/sh_4margins.pdf
+	    ./pdfcrowd.sh - $(COMMON) -margins 0.25in 0.5in 0.75in 1.0in -out $(OUT)/sh_client_4margins.pdf
 
 	@./pdfcrowd.sh @ $(COMMON)
 
