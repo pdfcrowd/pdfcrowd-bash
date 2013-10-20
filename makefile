@@ -6,7 +6,7 @@ OUT := ./test_files/out
 
 .PHONY: test
 test:
-	@./pdfcrowd.sh http://www.web-to-pdf.com $(COMMON) -out $(OUT)/sh_client_uri.pdf
+	@./pdfcrowd.sh http://dl.dropboxusercontent.com/u/9346438/tests/webtopdfcom.html $(COMMON) -out $(OUT)/sh_client_uri.pdf
 	@./pdfcrowd.sh ../test_files/in/simple.html -use-ssl $(COMMON) -out $(OUT)/sh_client_upload.pdf
 	@echo "$TEST_HTML" | ./pdfcrowd.sh - $(COMMON) -out $(OUT)/sh_client_content.pdf
 	@echo '<div style="background-color:red;height:100%">4 margins</div>' | \
